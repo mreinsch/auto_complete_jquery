@@ -35,7 +35,7 @@ auto-complete method in your controller, such as:
 using jQuery and the jquery-autocomplete plugin mechanism, for example:
 
   $(document).ready(function() {
-    $("input#post_title").autocomplete("auto_complete_for_post_title")
+    $("input#post_title").autocomplete({ajax: "/blog/auto_complete_for_post_title"})
   });
 
 By default, auto_complete_for limits the results to 10 entries,
@@ -45,6 +45,14 @@ auto_complete_for takes a third parameter, an options hash to
 the find method used to search for the records:
 
   auto_complete_for :post, :title, :limit => 15, :order => 'created_at DESC'
+
+5) Create a route for the auto complete function. You can add the following 
+generic route at the beginning of your config/routes.rb to take care of this:
+
+  map.auto_complete ':controller/:action',
+    :requirements => { :action => /auto_complete_for_\S+/ },
+    :conditions => { :method => :get }
+
 
 For more information, see:
 * jQuery site: http://jquery.com
