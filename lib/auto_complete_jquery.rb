@@ -12,9 +12,6 @@ module AutoCompleteJquery
   #     auto_complete_for :post, :title
   #   end
   #
-  #   # View
-  #   <%= text_field_with_auto_complete :post, title %>
-  #
   # By default, auto_complete_for limits the results to 10 entries,
   # and sorts by the given field.
   # 
@@ -22,9 +19,6 @@ module AutoCompleteJquery
   # the find method used to search for the records:
   #
   #   auto_complete_for :post, :title, :limit => 15, :order => 'created_at DESC'
-  #
-  # For help on defining text input fields with autocompletion, 
-  # see ActionView::Helpers::JavaScriptHelper.
   #
   # For more on jQuery auto-complete, see the docs for the jQuery autocomplete 
   # plugin used in conjunction with this plugin:
