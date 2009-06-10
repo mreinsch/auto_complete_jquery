@@ -1,1 +1,1 @@
-ActionController::Base.send :include, AutoCompleteJquery
+require File.dirname(__FILE__) + "/rails/init"
