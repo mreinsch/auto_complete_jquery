@@ -20,8 +20,8 @@ field as you'd create in a Rails erb view:
   
 2) Include the appropriate JS files and CSS in your layout or similar:
 
-  <%= stylesheet_link_tag 'jquery.ui.autocomplete' %>
-  <%= javascript_include_tag 'jquery.min', 'jquery.dimensions.min', 'jquery.templating', 'jquery.ui.autocomplete.ext', 'jquery.ui.autocomplete', :cache => 'jquery' %>
+  <%= stylesheet_link_tag 'jquery.autocomplete' %>
+  <%= javascript_include_tag 'jquery.min', 'jquery.autocomplete.min', :cache => 'jquery' %>
 
 3) Use the auto_complete_for controller macro to generate the appropriate
 auto-complete method in your controller, such as:
