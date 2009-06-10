@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
 		"auto_complete_jquery.gemspec", 
 		"init.rb", 
 		"lib/auto_complete_jquery.rb"]
-  s.rdoc_options = ["--main", "READMEi.rdoc"]
+  s.rdoc_options = ["--main", "README.rdoc"]
   s.extra_rdoc_files = ["CHANGELOG", "README.rdoc"]
 end
