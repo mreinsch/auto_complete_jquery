@@ -63,3 +63,5 @@ For more information, see:
 
 
 Copyright (c) 2008 Cobalt Edge LLC, released under the MIT license.
+Copyright (c) 2009 mobalean LLC, released under the MIT license.
+
