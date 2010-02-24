@@ -56,6 +56,11 @@ module AutoCompleteJquery
         :limit => 10 }.merge!(options)
       
       define_method("auto_complete_for_#{object}_#{method}") do
+        if params[:q].blank?
+          render :text => ""
+          return
+        end
+
         find_options = generic_find_options.clone
         find_options[:conditions] = [ "LOWER(#{method}) LIKE ?", '%' + params[:q].downcase + '%' ]
         find_options[:limit] = [find_options[:limit], params[:limit].to_i].min if params[:limit]
